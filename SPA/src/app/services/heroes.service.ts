@@ -67,13 +67,12 @@ export class HeroesService {
    }
 
    buscarHeroes( termino:string ):Heroe[]{
-     console.log(termino);
-     let arrHeroes:Heroe[];
+     let arrHeroes:Heroe[] = [];
      termino = termino.toLowerCase();
      for( let heroe of this.heroes  ){
        let nombre = heroe.nombre.toLowerCase();
-
-       if( nombre.indexOf(termino) > 0 )
+       console.log('nombre: '+ nombre +' buscado: '+termino);
+       if( nombre.indexOf(termino) >= 0 )
         arrHeroes.push( heroe );
      }
      console.log(arrHeroes);
