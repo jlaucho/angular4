@@ -7,15 +7,16 @@ import { HeroesService, Heroe } from '../../services/heroes.service';
   templateUrl: './heroe-buscado.component.html'
 })
 export class HeroeBuscadoComponent implements OnInit {
-encontrados:Heroe[];
+heroes:Heroe[];
+textoBuscado:string;
   constructor( private _heroesService:HeroesService,
                private activedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.activedRoute.params.subscribe( text=>{
-      let textoBuscado:string = text['texto'];
-      this.encontrados = this._heroesService.buscarHeroes( textoBuscado );
-      console.log(this.encontrados);
+      this.textoBuscado = text['texto'];
+      this.heroes = this._heroesService.buscarHeroes( this.textoBuscado );
+      console.log(this.heroes.length);
     });
   }
 

@@ -1,3 +1,25 @@
-<p>
-  heroe-buscado works!
-</p>
+<h2>Heroes Discponibles <small>Busqueda por: {{ textoBuscado }}</small> </h2>
+<div *ngIf="heroes.length == 0"
+    class="alert alert-info" role="alert">
+  <strong>No Tiene coincidencias</strong> palabra: {{ textoBuscado }}.
+</div>
+<div class="card-columns container-main">
+  <div class="card text-justify marginInterno"
+    *ngFor="let heroe of heroes; let id = index"
+
+  >
+    <img class="card-img-top tamanioImg" [src]="heroe.img" [alt]="heroe.nombre">
+    <div class="card-block">
+      <h4 class="card-title">{{ heroe.nombre }} <small>({{ heroe.aparicion | date:'y'}})</small></h4>
+      <p class="card-text">{{ heroe.bio }}</p>
+      <p class="card-text"><small class="text-muted">Casa: {{ heroe.casa }}</small></p>
+    </div>
+    <br>
+    <a [routerLink]="['/heroe', id]"
+      class="btn btn-outline-primary btn-block"
+    >Ver mas link ...</a>
+    <button (click)='mostrarHeroe(id)'
+      type="button"
+      class="btn btn-outline-success btn-block">Ver mas...</button>
+  </div>
+</div>

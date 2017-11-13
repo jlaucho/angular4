@@ -55,9 +55,7 @@ export class HeroesService {
     }
   ];
 
-  constructor() {
-    console.log('Servicio arpelo');
-   }
+  constructor() {}
    tomarHeroes(){
      return this.heroes
    }
@@ -71,11 +69,10 @@ export class HeroesService {
      termino = termino.toLowerCase();
      for( let heroe of this.heroes  ){
        let nombre = heroe.nombre.toLowerCase();
-       console.log('nombre: '+ nombre +' buscado: '+termino);
        if( nombre.indexOf(termino) >= 0 )
         arrHeroes.push( heroe );
      }
-     console.log(arrHeroes);
+    // console.log(arrHeroes);
     return arrHeroes;
    }
 
