@@ -10,11 +10,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td scope="row">1</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@md</td>
+      <tr *ngFor="let usuario of usuarios; let i = index">
+        <td scope="row">{{ i + 1 }}</td>
+        <td>{{ usuario.name }}</td>
+        <td>{{ usuario.apellido }}</td>
+        <td>{{ usuario.email }}</td>
         <td class="text-right">
           <a href="#" class="btn btn-outline-primary btn-sm">Ver..</a>
           <button type="button" class="btn btn-outline-danger btn-sm">Eliminar</button>
