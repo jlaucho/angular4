@@ -45,7 +45,10 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $u = new User();
+        $u->fill($request->all());
+        $u->save();
+        return $u;
     }
 
     /**
@@ -56,7 +59,9 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $u = User::find($id);
+
+        return response()->json($u);
     }
 
     /**
@@ -90,6 +95,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        dd('estamos en destroy');
     }
 }

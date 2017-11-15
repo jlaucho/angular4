@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Http } from '@angular/http';
+import { UsuarioService } from '../../../services/usuario.service';
 
 @Component({
   selector: 'app-create',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  usuario:any = {
+    name: "",
+    apellido: "",
+    email:"",
+    F_nacimiento:""
+  };
+  constructor( private http: Http,
+               private _usuarioService: UsuarioService) { }
 
   ngOnInit() {
+  }
+  guardarUsuario(){
+    return this._usuarioService.guardarUsuario( this.usuario )
+            .subscribe( resp =>{
+                console.log(resp)
+            })
   }
 
 }

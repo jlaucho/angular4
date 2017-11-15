@@ -1,37 +1,55 @@
-<form>
+<form (ngSubmit)="guardarUsuario()" #forma="ngForm">
   <div class="form-group">
     <label for="basic-url">Nombre</label>
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon3"><span class="fa fa-user"></span>  </span>
-      <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+      <input type="text" class="form-control"
+            [(ngModel)]="usuario.name" name="name" id="basic-url"
+            aria-describedby="basic-addon3">
     </div>
     <br>
     <label for="basic-url">Apellido</label>
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon3"><span class="fa fa-font"></span>  </span>
-      <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+      <input type="text" class="form-control"
+            name="apellido"
+            required
+            [(ngModel)]="usuario.apellido" id="basic-url"
+            aria-describedby="basic-addon3">
     </div>
     <br>
     <label for="basic-url">Correo</label>
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon3"><span class="fa fa-envelope"></span>  </span>
-      <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+      <input type="text" class="form-control"
+            name="email"
+            required
+            [(ngModel)]="usuario.email" id="basic-url"
+            aria-describedby="basic-addon3">
     </div>
     <br>
-    <label for="basic-url">Clave</label>
+    <label for="basic-url">Fecha de nacimiento</label>
     <div class="input-group">
-      <span class="input-group-addon" id="basic-addon3"><span class="fa fa-certificate"></span>  </span>
-      <input type="password" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+      <span class="input-group-addon" id="basic-addon3"><span class="fa fa-envelope"></span>  </span>
+      <input type="text" class="form-control"
+            name="F_nacimiento"
+            [(ngModel)]="usuario.F_nacimiento" id="basic-url"
+            aria-describedby="basic-addon3">
     </div>
     <br>
-    <label for="basic-url">Repita la clave</label>
+    <label for="basic-url">Clavelave</label>
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon3"><span class="fa fa-certificate"></span>  </span>
-      <input type="password" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+      <input type="password" class="form-control" id="basic-url"
+              [(ngModel)]="usuario.password"
+              name="password"
+              aria-describedby="basic-addon3">
     </div>
   </div>
   <br>
   <div class="m_bottom">
-    <button type="submit" class='btn btn-outline-primary btn-block'>Registrar</button>
+    <button type="submit"
+            [disabled]="forma.invalid"
+            class='btn btn-outline-primary btn-block'>Guardar</button>
   </div>
 </form>

@@ -16,7 +16,7 @@
         <td>{{ usuario.apellido }}</td>
         <td>{{ usuario.email }}</td>
         <td class="text-right">
-          <a href="#" class="btn btn-outline-primary btn-sm">Ver..</a>
+          <a [routerLink]="['/usuario', 'detalle', usuario.id]" class="btn btn-outline-primary btn-sm">Ver..</a>
           <button type="button" class="btn btn-outline-danger btn-sm">Eliminar</button>
         </td>
       </tr>
