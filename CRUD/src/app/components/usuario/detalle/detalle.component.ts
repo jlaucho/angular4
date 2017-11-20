@@ -25,12 +25,12 @@ export class DetalleComponent implements OnInit {
       this.idUser = this.activeRoute.params.subscribe( id =>{
         this._usuarioService.getUsuario( id['id'] )
             .subscribe( resp => {
-              let idx = id['id'];
-              console.log(idx);
-              this.usuario.name = resp[(idx - 1)].name;
-              this.usuario.apellido = resp[(idx - 1)].apellido;
-              this.usuario.email = resp[(idx - 1)].email;
-              this.usuario.F_nacimiento = resp[(idx - 1)].F_nacimiento;
+              //let idx = id['id'];
+              //console.log(resp.name);
+              this.usuario.name = resp.name;
+              this.usuario.apellido = resp.apellido;
+              this.usuario.email = resp.email;
+              this.usuario.F_nacimiento = resp.F_nacimiento;
             })
       })
     }

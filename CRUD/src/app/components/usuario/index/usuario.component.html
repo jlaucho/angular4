@@ -10,14 +10,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let usuario of usuarios; let i = index">
+      <tr *ngFor="let usuario of usuarios | actualizartabla; let i = index">
         <td scope="row">{{ i + 1 }}</td>
         <td>{{ usuario.name }}</td>
         <td>{{ usuario.apellido }}</td>
         <td>{{ usuario.email }}</td>
         <td class="text-right">
           <a [routerLink]="['/usuario', 'detalle', usuario.id]" class="btn btn-outline-primary btn-sm">Ver..</a>
-          <button type="button" class="btn btn-outline-danger btn-sm">Eliminar</button>
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)=eliminar(usuario.id,i)>Eliminar</button>
         </td>
       </tr>
     </tbody>

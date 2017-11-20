@@ -20,5 +20,17 @@ export class UsuarioComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  eliminar( idx:number, position:number ){
+    console.log('la posiacion es '+ position);
+    this._usuarioService.eliminarUsuario( idx )
+        .subscribe( resp =>{
+          if( resp.status == 200 ){
+            console.log('objeto original');
+            console.log(this.usuarios);
+            console.log('objeto recortado');
+            delete this.usuarios[ position ];
+            console.log(this.usuarios);
+          }
+        });
+  }
 }
