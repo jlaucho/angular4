@@ -24,7 +24,7 @@ export class CreateComponent implements OnInit {
   guardarUsuario(){
     return this._usuarioService.guardarUsuario( this.usuario )
             .subscribe( resp =>{
-                console.log(resp)
+                console.log(resp.status)
             })
   }
 
