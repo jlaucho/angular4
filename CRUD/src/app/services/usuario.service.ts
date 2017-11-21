@@ -39,4 +39,17 @@ export class UsuarioService {
                 //.map( resp =>resp.json())
                 .map( resp =>resp )
   }
+
+  actualizarUsuario( usuario:any, id:number ){
+    const headers = new Headers();
+          headers.append('Content-Type', 'application/json');
+    let body = JSON.stringify( usuario );
+    let url = `${ this.urlUsers }/${ id }`;
+    console.log(url);
+    return this.http.put( url, body, { headers:headers })
+                .map( resp =>{
+                  console.log( resp.json())
+                })
+
+  }
 }

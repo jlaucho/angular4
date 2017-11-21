@@ -11,6 +11,7 @@ import { NgForm } from '@angular/forms';
 export class DetalleComponent implements OnInit {
 
   idUser:any;
+  visibleClave:boolean = true;
   usuario:any = {
     name: "",
     apellido: "",
@@ -21,6 +22,8 @@ export class DetalleComponent implements OnInit {
   constructor( private router: Router,
                private activeRoute: ActivatedRoute,
                private _usuarioService: UsuarioService) {
+
+      this.visibleClave = false;
 
       this.idUser = this.activeRoute.params.subscribe( id =>{
         this._usuarioService.getUsuario( id['id'] )
@@ -39,7 +42,14 @@ export class DetalleComponent implements OnInit {
   }
 
   guardarUsuario(){
-    console.log(this.usuario)
+    let idx = this.activeRoute.params.subscribe(
+      id =>{
+        this._usuarioService.actualizarUsuario( this.usuario, id['id'])
+            .subscribe()
+    });
+        /*.subscribe( resp =>  {
+          console.log( resp );
+        })*/
   }
 
 }
