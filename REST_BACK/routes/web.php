@@ -14,4 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('user', 'UserController');
+include_once(base_path('routes\web2.php'));
+//Route::resource('user', 'UserController');
