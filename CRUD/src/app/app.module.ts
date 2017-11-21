@@ -8,7 +8,7 @@ import { app_routing } from './app.routes';
 
 //services
 
-import { UsuarioService } from './services/usuario.service';
+import { UsuarioService } from './providers/usuario.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
