@@ -45,11 +45,9 @@ export class UsuarioService {
           headers.append('Content-Type', 'application/json');
     let body = JSON.stringify( usuario );
     let url = `${ this.urlUsers }/${ id }`;
-    console.log(url);
+    //console.log(url);
     return this.http.put( url, body, { headers:headers })
-                .map( resp =>{
-                  console.log( resp.json())
-                })
+                .map( resp => resp.ok)
 
   }
 }

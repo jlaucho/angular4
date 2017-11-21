@@ -1,6 +1,9 @@
 <form (ngSubmit)="guardarUsuario()" #forma="ngForm">
   <div class="form-group">
     <label for="basic-url">Nombre</label>
+    <div class="alert alert-success">
+      El registro se ha actualizado correctamente
+    </div>
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon3"><span class="fa fa-user"></span>  </span>
       <input type="text" class="form-control"

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { UsuarioService } from '../../../services/usuario.service';
+import { UsuarioService } from '../../../providers/usuario.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -18,6 +18,7 @@ export class DetalleComponent implements OnInit {
     email:"",
     F_nacimiento:""
   };
+  respuesta:boolean = false;
 
   constructor( private router: Router,
                private activeRoute: ActivatedRoute,
@@ -45,8 +46,13 @@ export class DetalleComponent implements OnInit {
     let idx = this.activeRoute.params.subscribe(
       id =>{
         this._usuarioService.actualizarUsuario( this.usuario, id['id'])
-            .subscribe()
+            .subscribe( respuesta => {
+              if(respuesta){
+                this.respuesta = true;
+              }
+            })
     });
+    //console.log(idx);
         /*.subscribe( resp =>  {
           console.log( resp );
         })*/

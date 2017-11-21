@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Http } from '@angular/http';
-import { UsuarioService } from '../../../services/usuario.service';
+import { UsuarioService } from '../../../providers/usuario.service';
 
 @Component({
   selector: 'app-create',
