@@ -18,6 +18,9 @@ import { UsuarioComponent } from './components/usuario/index/usuario.component';
 import { DetalleComponent } from './components/usuario/detalle/detalle.component';
 import { CreateComponent } from './components/usuario/create/create.component';
 
+//PIPES
+import { ActualizartablaPipe } from './pipes/actualizartabla.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,8 @@ import { CreateComponent } from './components/usuario/create/create.component';
     HomeComponent,
     UsuarioComponent,
     DetalleComponent,
-    CreateComponent
+    CreateComponent,
+    ActualizartablaPipe
   ],
   imports: [
     BrowserModule,

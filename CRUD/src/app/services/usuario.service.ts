@@ -15,8 +15,8 @@ export class UsuarioService {
 
   getUsuario( idx:number ){
     let url = `${ this.urlUsers }/${ idx }`;
-    return this.http.get( this.urlUsers )
-      .map( resp => resp.json() )
+    return this.http.get( url )
+      .map( resp =>resp.json())
   }
 
   guardarUsuario( usuario:any){
@@ -31,5 +31,12 @@ export class UsuarioService {
                 //console.log(resp);
                 return resp;
               })
+  }
+
+  eliminarUsuario( id:number ){
+    let url = `${ this.urlUsers }/${ id }`;
+    return this.http.delete( url )
+                //.map( resp =>resp.json())
+                .map( resp =>resp )
   }
 }
