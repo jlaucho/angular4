@@ -16,8 +16,11 @@ export class CreateComponent implements OnInit {
     email:"",
     F_nacimiento:""
   };
+  visibleClave:boolean;
   constructor( private http: Http,
-               private _usuarioService: UsuarioService) { }
+               private _usuarioService: UsuarioService) {
+                  this.visibleClave = true;
+               }
 
   ngOnInit() {
   }

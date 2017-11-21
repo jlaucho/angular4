@@ -37,7 +37,9 @@
             aria-describedby="basic-addon3">
     </div>
     <br>
-    <label for="basic-url">Clavelave</label>
+    <div *ngIf="visibleClave">
+
+    <label for="basic-url">Clave</label>
     <div class="input-group">
       <span class="input-group-addon" id="basic-addon3"><span class="fa fa-certificate"></span>  </span>
       <input type="password" class="form-control" id="basic-url"
@@ -45,11 +47,17 @@
               name="password"
               aria-describedby="basic-addon3">
     </div>
-  </div>
   <br>
-  <div class="m_bottom">
-    <button type="submit"
+    <div class="m_bottom">
+      <button type="submit"
             [disabled]="forma.invalid"
             class='btn btn-outline-primary btn-block'>Guardar</button>
+    </div>
+  </div>
+    <div class="m_bottom" *ngIf="!visibleClave">
+      <button type="submit"
+            [disabled]="forma.invalid"
+            class='btn btn-outline-primary btn-block'>Actualizar</button>
+    </div>
   </div>
 </form>
