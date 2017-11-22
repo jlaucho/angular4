@@ -3,3 +3,10 @@
   margin-top: 20px;
   margin-bottom: 40px;
 }
+.active{
+  font-weight: bold;
+}
+
+.gris > a{
+  color: #84848 !important;
+}
