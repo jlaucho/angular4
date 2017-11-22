@@ -9,12 +9,14 @@ import { HomeComponent } from './components/home/home.component';
 //services
 import { ImagesService } from './providers/images.service';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
