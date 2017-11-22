@@ -14,4 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('user', 'UserController');
+
+Route::get('registroImagenes',[
+	'uses'	=>'IngresarRegistrosController@registroImagenes',
+	'as'		=>'ingresar.imagenes'
+]);
