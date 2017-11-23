@@ -14,14 +14,14 @@ class IngresarRegistrosController extends Controller
     	$faker = Faker::create();
     	//dd('estamos en el registro de imagenes');
     	$imageLinks = array(
-        	"img/img_angular/imagen1.jpg",
-        	"img/img_angular/imagen2.jpg",
-        	"img/img_angular/imagen3.jpg",
-        	"img/img_angular/imagen4.jpg",
-        	"img/img_angular/imagen5.jpg",
-        	"img/img_angular/imagen6.jpg",
-        	"img/img_angular/imagen7.jpg",
-        	"img/img_angular/imagen8.jpg",
+        	"img/img_angular/image1.jpg",
+        	"img/img_angular/image2.jpg",
+        	"img/img_angular/image3.jpg",
+        	"img/img_angular/image4.jpg",
+        	"img/img_angular/image5.jpg",
+        	"img/img_angular/image6.jpg",
+        	"img/img_angular/image7.jpg",
+        	"img/img_angular/image8.jpg",
         );
 
     	foreach ($imageLinks as $key => $imageLink) {

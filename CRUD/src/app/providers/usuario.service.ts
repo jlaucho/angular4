@@ -5,7 +5,7 @@ import 'rxjs/Rx';
 export class UsuarioService {
   usuarios:any;
   //urlUsers = 'http://localhost/practicas/angular4/REST_BACK/public/index.php/api.rest/user';
-  urlUsers:string = 'http://localhost:99/practicas/angular4/REST_BACK/public/index.php/api.rest/user';
+  urlUsers:string = 'http://localhost:99/practicas/angular4/REST_BACK/public/index.php/api.rest/v1/user';
   constructor( private http: Http ) { }
 
   getUsuarios(){

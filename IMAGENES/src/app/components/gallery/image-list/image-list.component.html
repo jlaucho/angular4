@@ -1,3 +1,4 @@
+<app-image [selectImage]="selectIma"></app-image>
 <div class="container">
   <div class="row">
     <!--
@@ -5,9 +6,10 @@
   -->
   <!--
 -->
-    <a href="#" *ngFor="let image of images">
+
+    <a  *ngFor="let image of images">
       <div class="col-md-3 col-sm-4 col-xs-6">
-        <img class="img-responsive" [src]="image.thumbnail"  alt="...">
+        <img class="img-responsive" [src]="image.thumbnail" (click)="onSelect(image)" alt="...">
       </div>
     </a>
   </div>
