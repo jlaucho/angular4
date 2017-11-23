@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-include_once(base_path('routes\web2.php'));
+include_once(base_path('routes/web2.php'));
 //Route::resource('user', 'UserController');
 
 Route::get('registroImagenes',[
