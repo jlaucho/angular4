@@ -11,10 +11,10 @@ export class GalleryComponent implements OnInit {
   constructor( private _imageService:ImagesService ) { }
 
   ngOnInit() {
-    this._imageService.getImages()
+    /*this.images  = this._imageService.getImages()
           .subscribe( resp =>{
-            return  resp = this.images
-          })
+            this.images = resp
+          })*/
   }
 
 }
