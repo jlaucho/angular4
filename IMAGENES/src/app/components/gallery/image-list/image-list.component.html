@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <!--
+    <app-image></app-image>
+  -->
+  <!--
+-->
+    <a href="#" *ngFor="let image of images">
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <img class="img-responsive" [src]="image.thumbnail"  alt="...">
+      </div>
+    </a>
+  </div>
+</div>

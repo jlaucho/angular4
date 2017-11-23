@@ -10,13 +10,17 @@ import { HomeComponent } from './components/home/home.component';
 import { ImagesService } from './providers/images.service';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { ImageComponent } from './components/gallery/image-list/image.component';
+import { ImageListComponent } from './components/gallery/image-list/image-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    GalleryComponent
+    GalleryComponent,
+    ImageComponent,
+    ImageListComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,8 @@ import { Observable } from 'rxjs/Rx';
 @Injectable()
 export class ImagesService {
 
-  urlBase:string = 'http://localhost/practicas/angular4/REST_BACK/public/index.php/api.rest/v1';
+  //urlBase:string = 'http://localhost/practicas/angular4/REST_BACK/public/index.php/api.rest/v1';
+  urlBase:string = 'http://localhost:99/practicas/angular4/REST_BACK/public/index.php/api.rest/v1';
   constructor(private http:Http) { }
 
   getImages(){
