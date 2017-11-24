@@ -1,19 +1,10 @@
 <app-image [selectImag]="selectIma"></app-image>
 <div class="container">
   <div class="row">
-    <!--
-    <app-image></app-image>
-  -->
-  <!--
--->
-
     <a  *ngFor="let image of images">
       <div class="col-md-3 col-sm-4 col-xs-6">
         <img class="img-responsive" src="./assets/{{image.imageLink}}" (click)="onSelect(image)" alt="...">
       </div>
     </a>
   </div>
-  <pre>
-    {{ images | json }}
-  </pre>
 </div>

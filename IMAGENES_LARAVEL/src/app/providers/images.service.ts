@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+//import { Http, Response } from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Image } from '../components/models/image';
-import 'rxjs/Rx';
-import { Observable } from 'rxjs/Rx';
+//import 'rxjs/Rx';
+//import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class ImagesService {
-  images:any[];
+  //images:Observable<Image[]>;
 /*
   images:any[] = [
     new Image('1', 'primera Imagen', 'descripcion de la imagen', './assets/img/image1.jpg', './assets/img/image1-1.jpg'),
@@ -22,18 +23,15 @@ export class ImagesService {
 */
   urlBase:string = 'http://localhost/practicas/angular4/REST_BACK/public/index.php/api.rest/v1';
   //urlBase:string = 'http://localhost:99/practicas/angular4/REST_BACK/public/index.php/api.rest/v1';
-  constructor(private http:Http) {
+  constructor(private http:HttpClient) {
    }
 //estas son para las estaticas
-   getImage(){
+   /*getImage(){
      return this.images;
-   }
+   }*/
 //esta son para laravel
   getImages(){
     let url = `${ this.urlBase }/images`;
-    return this.http.get( url )
-            .map(resp => resp.json()
-              //console.log(this.images)
-            )
+    return this.http.get( url );
   }
 }

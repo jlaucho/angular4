@@ -10,17 +10,16 @@ import { Observable } from 'rxjs/Observable';
 })
 export class ImageListComponent implements OnInit {
 
-  images:any[];
+  images:Object;
   selectIma: Image;
 
   constructor( private _imagesService:ImagesService ) { }
 
   ngOnInit() {
     this._imagesService.getImages()
-          .subscribe(resp => {
-            //console.log(resp)
-            this.images = resp
-          });
+      .subscribe( resp =>{
+        this.images = resp;
+        });
     //this.images = this._imagesService.getImage();
   }
 

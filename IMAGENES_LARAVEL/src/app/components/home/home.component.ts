@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { ImagesService } from '../../providers/images.service';
 
 @Component({
