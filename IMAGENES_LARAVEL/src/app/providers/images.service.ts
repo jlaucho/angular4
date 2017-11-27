@@ -21,8 +21,8 @@ export class ImagesService {
     new Image('9', 'primera Imagen', 'descripcion de la imagen', './assets/img/image9.jpg', './assets/img/image9-1.jpg')
 ]
 */
-  urlBase:string = 'http://localhost/practicas/angular4/REST_BACK/public/index.php/api.rest/v1';
-  //urlBase:string = 'http://localhost:99/practicas/angular4/REST_BACK/public/index.php/api.rest/v1';
+  //urlBase:string = 'http://localhost/practicas/angular4/REST_BACK/public/index.php/api.rest/v1';
+  urlBase:string = 'http://localhost:99/practicas/angular4/REST_BACK/public/index.php/api.rest/v1';
   constructor(private http:HttpClient) {
    }
 //estas son para las estaticas
