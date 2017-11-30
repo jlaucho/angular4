@@ -1,0 +1,10 @@
+<h1>Chat</h1>
+<hr>
+<div class="app-mensajes" id="app-mensajes">
+  <div class="" *ngFor="let chat of chats | async">
+    <span class="badge badge-primary"> {{ chat.user_id }} </span>
+    <p>
+      {{ chat.mensaje }}
+    </p>
+  </div>
+</div>
